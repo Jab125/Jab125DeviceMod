@@ -1,31 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "ultralightfabric",
+  "id": "device",
   "version": "${version}",
-  "name": "Ultralight Fabric",
-  "description": "An Ultralight implementation for Fabric",
+  "name": "Jab125's Device Mod",
+  "description": "",
   "authors": [
-    "isXander",
-    "CCBlueX"
+    "Jab125"
   ],
-  "contact": {
-    "homepage": "https://isxander.dev",
-    "issues": "https://github.com/isXander/UltralightFabric/issues",
-    "sources": "https://github.com/isXander/UltralightFabric"
-  },
-  "license": "GPL 3.0",
-  "environment": "client",
-  "icon": "assets/ultralightfabric/icon.png",
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/device/icon.png",
+  "environment": "*",
   "entrypoints": {
+    "client": [
+      "com.jab125.device.device.client.DeviceClient"
+    ],
+    "main": [
+      "com.jab125.device.device.Device"
+    ]
   },
   "mixins": [
-    "ultralightfabric.mixins.json"
+    "device.mixins.json"
   ],
   "depends": {
+    "fabricloader": ">=0.14.5",
     "fabric": "*",
-    "fabricloader": ">=0.12.0",
-    "fabric-language-kotlin": ">=1.7.1+kotlin.1.6.10",
-    "minecraft": "1.18.x",
-    "java": ">=17"
+    "minecraft": "1.19-alpha.22.19.a"
   }
 }
